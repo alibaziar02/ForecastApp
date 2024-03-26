@@ -14,10 +14,3 @@ def nextYear(x:list):
             pisbini.append([x[means.index(i)][0] / 1.1,x[means.index(i)][1] / 1.1,x[means.index(i)][2] /1.1])
     means_pisbini = [mean(i) for i in pisbini]
     return ({"MIZAN":means_pisbini}),
-index=['bahar','tabstan','pieeze','zemestan']
-data = pd.DataFrame(nextYear(mizan_barandegi)[0],index=index)
-data.plot.barh()
-plot.xlabel("Barandgei")
-plot.title("MIZAN BARANDGI DAR SAL 1403")
-plot.show()
-data.to_excel("barandegi.xlsx")
